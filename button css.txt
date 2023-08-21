@@ -1,0 +1,14 @@
+button{
+font:inherit;
+padding:0.75em 3em;
+bacground:hsl(185,53%,15%);
+border:0.1em solid hsl(185,53%,34%);
+border-radius:100vw;
+cursor:pointer;
+transition:background-color 250ms;
+}
+
+button:hover,
+button:focus-visible{
+background:hsl(185,53%,34%);
+}

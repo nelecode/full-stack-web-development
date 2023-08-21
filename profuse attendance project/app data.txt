@@ -1,0 +1,113 @@
+app.get('/', (req, res) => {
+  res.render('home', { registeredUser: "" });
+})
+
+app.post("/", async function (req, res) {
+  let findUser = await User.findOne({ email: req.body.email });
+  // console.log(findUser)
+  if (!findUser) {
+    res.render("home", { registeredUser: "You aren't Register? Kindly Register Yorself!" })
+  } else {
+    // res.render("secret", { name: findUser.fName.toUpperCase(), id: findUser._id })
+    res.render("secret",{user:findUser})
+  }
+})
+app.post("/naim", async function (req, res) {
+    let valueId = req.body.radio
+    if (!valueId) {
+      res.render("secret")
+    } else {
+      // console.log(value)
+      const findUser = await User.findOne({ _id: valueId });
+      // console.log(findUser)
+      const newAttandance = new Attandance({
+        fName: findUser.fName,
+        lName: findUser.lName,
+        date: new Date().toString(),
+        attandance: "present"
+      })
+      const findAtt = await Attandance.findOne({ fName: findUser.fName })
+      // console.log(findAtt)
+      if (!findAtt) {
+        await newAttandance.save()
+      } else {
+        res.render("secret", { name: "", id: "" })
+      }
+  
+    }
+  
+  
+  
+  })
+
+// app.get("/signup", function (req, res) {
+//   res.sendFile(__dirname + "/signup.html")
+// })
+
+// app.post("/signup", async function (req, res) {
+//   // let a = req.body.fName;
+//   // let b = req.body.lName;
+//   // let c = req.body.email;
+//   // let d = req.body.password;
+//   // let e = req.body.cPassword;
+//   // // console.log(a)
+//   // console.log(b)
+//   // console.log(c)
+//   // console.log(d)
+//   // console.log(e)
+//   // const newUser = new User({
+//   //   fName: req.body.fName,
+//   //   lName: req.body.lName,
+//   //   email: req.body.email,
+//   //   password: req.body.password,
+//   //   cPassword: req.body.cPassword
+//   // })
+//   // await newUser.save()
+//   // res.redirect("/success")
+
+//   // console.log(req.body.email)
+
+//   let data = await User.findOne({ email: req.body.email });
+//   // console.log(data)
+//   if (!data) {
+//     const newUser = new User({
+//       fName: req.body.fName,
+//       lName: req.body.lName,
+//       email: req.body.email,
+//       password: req.body.password,
+//       cPassword: req.body.cPassword
+//     })
+//     await newUser.save()
+//     res.render("success")
+//   } else {
+//     res.render("exist")
+//   }
+//   // if(data.email==req.body.email){
+//   //   res.render("exist")
+//   // }else{
+//   //   const newUser = new User({
+//   //     fName: req.body.fName,
+//   //     lName: req.body.lName,
+//   //     email: req.body.email,
+//   //     password: req.body.password,
+//   //     cPassword: req.body.cPassword
+//   //   })
+//   //   await newUser.save()
+//   //   res.render("success")
+//   // }
+//   // data.foreach(item=>{
+//   //   console.log(item)
+//   // })
+//   // data.forEach(function(item){
+//   //   if(item.email===req.body.email){
+//   //     console.log("data hai")
+//   //   }else{
+//   //     console.log("data nahi hai")
+//   //   }
+//   // })
+
+// })
+// app.get("/success", function (req, res) {
+//   res.sendFile(__dirname + "/success.html")
+// })
+// 

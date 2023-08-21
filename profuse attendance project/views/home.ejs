@@ -1,0 +1,48 @@
+<%- include("partials/header"); -%>
+
+  <!-- login -->
+
+
+  <% if (err !="" ){ %>
+    <div class="container">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= err %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+    <% } %>
+
+        <div class="main container">
+          <div class="left">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, fugiat quo! Quidem facilis ullam, quo
+              doloribus laudantium quasi aliquam, consectetur, soluta quam blanditiis dolore dolor Lorem ipsum dolor sit
+              amet,
+              consectetur adipisicing elit. Molestias fuga voluptas iste vel voluptatibus odio, ipsum veritatis maxime
+              eius?
+              Sapiente consectetur autem aliquam optio sint iste a tempora quaerat incidunt, inventore at maxime dicta
+              animi
+              non deleniti expedita accusamus esse corporis ex. Iste voluptatum a officiis reprehenderit fuga sint
+              asperiores
+              nobis quam nulla laudantium nemo, nesciunt numquam ipsum accusamus iure ut rerum eum corrupti inventore!
+              Tempore
+              est, perspiciatis officia natus voluptas nobis fuga veniam provident architecto blanditiis, nostrum hic
+              illo
+              magni.
+          </div>
+          <div class="right">
+            <h1>Login</h1>
+            <form class="rform" action="/" method="post">
+              <span>Email</span>
+              <input type="text" name="email" placeholder="Enter your email" required>
+              <span>password</span>
+              <input type="password" name="password" placeholder="Enter your password" required>
+              <a href="">forgot password?</a>
+              <button id="location">Login</button>
+              <p>Don't have an account?<a href="signup">Sign Up here.</a></p>
+            </form>
+          </div>
+        </div>
+
+        <%- include('partials/footer'); -%>

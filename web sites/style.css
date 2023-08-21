@@ -1,0 +1,12 @@
+img {
+    width: 216px;
+    height: 198px;
+}
+hr {
+    border: 5px dotted;
+    width: 50px;
+    border-bottom: 0;
+}
+h1,h2,hr {
+    color: #19A7CE;
+}

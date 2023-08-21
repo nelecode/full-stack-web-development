@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+<!-- signup section   -->
+<% if(userMsg !="" ){ %>
+</if>
+<div class="container">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= userMsg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+<% } %>
+<div class="container signupDiv">
+    <h2>Sing up for Frofuse</h2>
+    <form action="/signup" method="post" class="fsignup">
+        <span>First Name</span>
+        <input type="text" name = "fName" placeholder="Enter Your First Name" required>  
+        <span>Last Name</span> 
+        <input type="text" name = "lName" placeholder="Enter Your Last Name" required>  
+        <span>Email Id</span>
+        <input type="email" name = "email" placeholder="Enter Your Email" required>   
+        <span>Password</span>
+        <input type="password" name = "password" placeholder="Enter Password" required>   
+        <span>Confirm</span>
+        <input type="password" name = "cPassword" placeholder="Confirm Password" required>    
+        <button>Sign Up</button>                     
+    </form>
+</div>
+
+
+<%- include("partials/footer"); -%>

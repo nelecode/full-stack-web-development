@@ -1,0 +1,189 @@
+.custColor {
+    background: rgb(6, 21, 81);
+}
+
+.custColor h4,
+.headinPuch {
+    color: white;
+}
+
+.custColor img,
+.headinPuch {
+    margin-left: 0.5rem;
+}
+
+.headinPuch p {
+    font-size: medium;
+}
+
+.mx {
+    padding-left: 25px;
+}
+
+.footer {
+    background: #1f304c;
+    color: white;
+    padding: 25px 0px;
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 0px;
+    position: static;
+    bottom: 0px;
+}
+
+.hr {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.main {
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.left {
+    background-color: antiquewhite;
+    padding: 25px 35px;
+    width: 40%;
+}
+
+.right {
+    /* background-color: aquamarine; */
+    padding: 25px;
+    width: 60%;
+}
+
+.left,
+.right {
+    height: 80vh;
+}
+
+.rform {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    width: 30vw;
+    /* text-align: center; */
+    margin: 25px auto 0 auto;
+}
+
+.right h1 {
+    text-align: center;
+}
+
+.rform span {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.rform input {
+    margin-top: 5px;
+    padding: 2.5px;
+    outline: none;
+}
+
+.rform a {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.rform button {
+    margin-top: 15%;
+    padding: 3.5px;
+    font-weight: bold;
+}
+.rform button:hover{
+        color: #eb4b4b;
+        background-color: #1f304c;
+}
+
+.rform p {
+    margin-top: 10px;
+}
+
+/* sign up form css  */
+
+.signupDiv {
+    /* border: 2px solid black; */
+    -webkit-box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.75);
+    margin-top: 45px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.signupDiv h2 {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.fsignup {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    margin: 0 auto 0 auto;
+    /* margin: 50px 0px; */
+}
+
+.fsignup input,
+.fsignup span {
+    margin-bottom: 3px;
+}
+
+.fsignup span,
+button {
+    font-weight: bold;
+}
+
+.fsignup input {
+    outline: none;
+}
+
+.fsignup button {
+    margin: 20px 0px 18px;
+    padding: 3.5px;
+}
+
+.fsignup button:hover,.secContainer button:hover {
+    color: #eb4b4b;
+    background-color: #1f304c;
+}
+.secretHeader{
+    margin: 15px 20px;
+    border-bottom: 2px solid #eb4b4b;
+}
+.secContainer{
+    /* border: 2px solid blue; */
+    text-align: center;
+    margin-top: 55px;
+}
+/* .secContainer button:hover{
+    color: #eb4b4b;
+    background-color: #1f304c;
+} */
+.attable{
+    margin-top: 25px;
+}
+.Logout{
+    margin: 4px 0px;
+}
+.Logout a{
+    text-decoration: none;
+    color: black;
+}
+.Logout:hover{
+    color: #eb4b4b;
+    background-color: #1f304c;
+}
+.Logout a:hover{
+    color: #eb4b4b;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
